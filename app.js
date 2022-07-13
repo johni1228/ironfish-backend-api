@@ -2,11 +2,11 @@ const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
 const logger = require('morgan');
+require('dotenv').config()
 
 // the app object
 const app = express();
-const port = 3000;
-
+const port = process.env.port || 5000;
 // router objects
 const indexRouter = require('./routes/index');
 
